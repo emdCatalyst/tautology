@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# tautology
 
-## Getting Started
+A lightweight mobile-friendly web application to visualize and evaluate boolean algebra expressions plus some spice.
 
-First, run the development server:
+## Prequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `node >= 18.17`.
+- `npm >= 10.2.3` or an equivalant version of a similar package manager.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+#### Hosted
 
-To learn more about Next.js, take a look at the following resources:
+The app is available at [tautology](http://tautology.herokuapp.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repo, `git clone https://github.com/Mahdios/tautology.git`.
+2. `cd tautology`.
+3. `npm install && npm run dev`, or with yarn `yarn add && yarn run dev`
 
-## Deploy on Vercel
+## Technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+:computer: [nextjs 14](https://nextjs.org/)
+:keyboard: [typescript 5](https://www.typescriptlang.org/)
+:bulb: [tailwindcss](https://tailwindcss.com/)
+:books: [shadcn/ui](https://ui.shadcn.com/)
+:scroll: [rosetta](https://github.com/lukeed/rosetta)
+
+## Technical details
+
+---
+
+#### Constructing a truth table
+
+- To check the validity of a given expression, we use a stack to validate the parentheses and a combination of checks to ensure it is syntactically correct.
+- To parse a given expression, we use Dijkstra's shunting yard algorithm to convert expressions from infix notation to reverse Polish notation (or postfix).
+
+- To evaluate a given list of tokens, we use two stacks to keep track of operators and operands, pop as many operands as needed, perform the operation, and then push the result onto the operands stack. Repeat until all of the operations are done.
