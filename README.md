@@ -2,16 +2,16 @@
 
 A lightweight mobile-friendly web application to visualize and evaluate boolean algebra expressions plus some spice.
 
-## Prequisites
-
 ---
+
+## Prequisites
 
 - `node >= 18.17`.
 - `npm >= 10.2.3` or an equivalant version of a similar package manager.
 
-## Usage
-
 ---
+
+## Usage
 
 #### Hosted
 
@@ -23,9 +23,9 @@ The app is available at [tautology](http://tautology.herokuapp.com)
 2. `cd tautology`.
 3. `npm install && npm run dev`, or with yarn `yarn add && yarn run dev`
 
-## Technologies
-
 ---
+
+## Technologies
 
 :computer: [nextjs 14](https://nextjs.org/)
 :keyboard: [typescript 5](https://www.typescriptlang.org/)
@@ -33,9 +33,9 @@ The app is available at [tautology](http://tautology.herokuapp.com)
 :books: [shadcn/ui](https://ui.shadcn.com/)
 :scroll: [rosetta](https://github.com/lukeed/rosetta)
 
-## Technical details
-
 ---
+
+## Technical details
 
 #### Constructing a truth table
 
