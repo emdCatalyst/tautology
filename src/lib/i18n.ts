@@ -2,12 +2,12 @@ import rosetta from "rosetta";
 const i18n = rosetta({
   en: {
     landing: {
-      header: "Hello! Want to evaluate a math expression",
+      header: "Generate a truth table to your liking!",
       form: {
         placeholder: "Your expression",
         button: "Evaluate",
         filters: {
-          length: "The expression must atleast be 3 characters long",
+          length: "The expression must atleast be 3 characters long.",
         },
         errors: {
           1: "Invalid character",
@@ -20,18 +20,19 @@ const i18n = rosetta({
         desc: `~,¬: Negation
         ∧,.: Conjunction
         V,+: Disjunction
-        ⊕: Xor
+        ⊕: XOR
         →: Implication
         ↔: Equivalance`,
       },
     },
+    footer: ({ year }: { year: number }) => `Made by Mahdi Djaber. © ${year}.`
   },
   ar: {
     landing: {
-      header: "مرحبا! لنكتشف بعضا من الرياضيات",
+      header: "!أنشا جداول صواب لعباراتك المنطقية المفضلة",
       form: {
         placeholder: "العبارة الخاصة بك",
-        button: "تقديم",
+        button: "معالجة",
         filters: {
           length: "يجب على العبارة ان تكون على الاقل بطول ثلاثة حروف",
         },
@@ -43,9 +44,15 @@ const i18n = rosetta({
           5: "موضع عنصر عملية غير صحيح",
           6: "موضع قوس غير صحيح",
         },
+        desc: `~,¬: الضد
+        ∧,.: التقاطع
+        V,+: الإتحاد
+        ⊕: XOR
+        →: إستلزام
+        ↔: تكافؤ`,
       },
-      info: [""],
     },
+    footer: ({ year }: { year: number }) => `طور بواسطة مهدي جابر. © ${year}.`
   },
 });
 i18n.locale("en");

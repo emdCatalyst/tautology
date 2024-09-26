@@ -69,6 +69,7 @@ export default function Home() {
           " "
         )}
       </section>
+      <footer className="text-center p-2">{i18n.t("footer", { year: new Date(Date.now()).getFullYear() }, lang)}</footer>
     </div>
   );
 }
