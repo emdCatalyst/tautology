@@ -52,7 +52,7 @@ const i18n = rosetta({
         ↔: تكافؤ`,
       },
     },
-    footer: ({ year }: { year: number }) => `طور بواسطة مهدي جابر. © ${year}.`
+    //footer: ({ year }: { year: number }) => `طور بواسطة مهدي جابر. © ${year}.`
   },
 });
 i18n.locale("en");

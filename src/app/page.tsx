@@ -12,8 +12,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import dynamic from "next/dynamic";
-//const Graphviz = dynamic(() => import("graphviz-react"), { ssr: false });
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 export default function Home() {
   console.log(useAtom(language));
   const [lang] = useAtom(language);
@@ -69,7 +69,10 @@ export default function Home() {
           " "
         )}
       </section>
-      <footer className="text-center p-2">{i18n.t("footer", { year: new Date(Date.now()).getFullYear() }, lang)}</footer>
+      <footer className="text-center p-2 flex flex-col items-center">
+        {i18n.t("footer", { year: new Date(Date.now()).getFullYear() }, lang)}
+        <Link href={"https://github.com/emdCatalyst/tautology"}><FaGithub size={20}></FaGithub></Link>
+      </footer>
     </div>
   );
 }
